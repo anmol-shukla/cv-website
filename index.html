@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anmol Shukla | Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9fafb;
+      --text-color: #111827;
+      --accent-color: #4f46e5;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+  background: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      color: #4b5563;
+    }
+
+    nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 1rem;
+}
+
+    nav a {
+  text-decoration: none;
+  color: #374151;
+  margin: 0;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+    nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #a5b4fc;
+  transition: width 0.3s;
+  width: 0;
+  margin-top: 4px;
+}
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 1024px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skills-list span {
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 0.6em 1.2em;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .skills-list span:hover {
+      transform: scale(1.05);
+    }
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .project {
+      padding-left: 1rem;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      white-space: pre-line;
+      color: #4b5563;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 2rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #c7d2fe;
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-left: 2rem;
+      padding-left: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -1.1rem;
+      top: 0.3rem;
+      width: 12px;
+      height: 12px;
+      background: var(--accent-color);
+      border-radius: 50%;
+    }
+
+    .timeline-entry h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-entry p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .profile-img {
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 0 0 4px white, 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="anmol.jpeg" alt="Anmol Shukla" class="profile-img" id="profile-image">
+    <h1>Anmol Shukla</h1>
+    <p>Backend & Full-Stack Developer | Python, Node.js, AWS</p>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a software engineer with 4+ years of experience building high-performance backend and full-stack applications. I specialize in Python, Node.js, React, and AWS. From malware detection systems to real-time web platforms, I focus on clean, scalable, and secure code.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>SQL</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>React.js</span>
+      <span>Redux</span>
+      <span>AWS</span>
+      <span>Docker</span>
+      <span>Git</span>
+      <span>Postman</span>
+      <span>Twilio</span>
+      <span>SendGrid</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project">
+        <h3>Malware Detection System</h3>
+        <p>Python-based backend system for detecting malicious files.
+Increased accuracy by 40% and reduced false positives by 30%.
+Used scikit-learn, pandas, and AWS Lambda for deployment.</p>
+      </div>
+      <div class="project">
+        <h3>Insurance Management Platform</h3>
+        <p>Full-stack platform with dynamic React.js frontend and Node.js backend.
+Integrated Twilio and SendGrid for real-time alerts.
+MySQL used for structured data management.</p>
+      </div>
+      <div class="project">
+        <h3>NFC Event Check-in System</h3>
+        <p>Built with React and Redux for real-time updates.
+Handled backend messaging with Node.js and Twilio.
+Enabled smart form validations and live attendee tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-entry">
+        <h3>Quickheal Technologies</h3>
+        <p><strong>Software Engineer (Python)</strong> | Apr 2023 – Present
+Led development of malware detection backend, optimizing large file processing, false positive filtering, and AWS integrations.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>Winjit Technologies</h3>
+        <p><strong>Full Stack Developer</strong> | Jun 2021 – Mar 2023
+Developed and deployed platforms for insurance & events using React, Node.js, and third-party APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:anmolshukla100@gmail.com">anmolshukla100@gmail.com</a></p>
+    <p>Phone: +91-8817418674</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/anmol-shukla-a9a42a120" target="_blank">linkedin.com/in/anmol-shukla-a9a42a120</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Anmol Shukla. Crafted with clean code and passion.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll("section").forEach(sec => observer.observe(sec));
+  </script>
+</body>
+
+</html>
